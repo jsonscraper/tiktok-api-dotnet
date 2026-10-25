@@ -30,7 +30,7 @@ public class Client : IDisposable {
         for(int attempt=0;attempt<=retries;attempt++){
             try{
                 using var req=new HttpRequestMessage(HttpMethod.Get,url);
-                req.Headers.Accept.ParseAdd("application/json");req.Headers.UserAgent.ParseAdd("jsonscraper-dotnet/0.1.0");
+                req.Headers.Accept.ParseAdd("application/json");req.Headers.UserAgent.ParseAdd("jsonscraper-dotnet/0.1.1");
                 using var res=await http.SendAsync(req,cancellationToken);
                 if(res.IsSuccessStatusCode)return await res.Content.ReadAsByteArrayAsync(cancellationToken);
                 int status=(int)res.StatusCode;string? retry=res.Headers.RetryAfter?.ToString();
