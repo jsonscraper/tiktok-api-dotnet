@@ -49,7 +49,7 @@ git clone https://github.com/jsonscraper/tiktok-api-dotnet.git
 cd tiktok-api-dotnet
 dotnet pack -c Release -o ./artifacts
 # In your application, use this local package folder:
-dotnet add package JsonScraper.TikTokApi --version 0.1.1 --source /absolute/path/to/tiktok-api-dotnet/artifacts
+dotnet add package JsonScraper.TikTokApi --version 0.1.2 --source /absolute/path/to/tiktok-api-dotnet/artifacts
 ```
 
 The package is built locally. A public NuGet release requires a separate nuget.org publishing connection.
